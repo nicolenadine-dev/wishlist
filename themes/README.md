@@ -5,11 +5,20 @@ A theme sets the look and the wording of your wishlist shop. Each theme is a fol
 | Theme | Folder | What it's like |
 |---|---|---|
 | RPG Item Shop | `rpg-shop` | A cozy pixel-game shop. Starred items are *Legendary*, gift-givers *Loot* what they buy, and Smudge the soot sprite picks gifts. |
+| Hearthside | `hearthside` | A classic, elegant Christmas in evergreen, cranberry and gold. Large, easy-to-read text and plain wording: starred items are *Top Picks* and gift-givers press *I bought this*. |
+| Winter Lights | `winter-lights` | Navy and silver with a strand of little lights, for any winter holiday. Same large text and plain wording as Hearthside. |
+| Shiny & Bright | `shiny-bright` | Mid-century retro holiday: soft aqua, ornament pink and mint, tinsel trees and atomic starbursts. Large text and plain wording. |
+| Krampusnacht | `krampusnacht` | The dark side of the holidays: near-black, deep oxblood and brass with an old-print title. Starred items are *Most Wanted*, gift-givers *Claim* what they buy, and a woodcut Krampus runs the gift helper. |
+| Gingerbread | `gingerbread` | A kawaii bakery in cookie-brown, icing white, candy pink and mint, with piped-icing edges. Starred items are *Extra Sweet* (marked with a gumdrop), and Ginny the gingerbread cookie runs the gift helper. Works for the holidays or birthdays. |
 | Starter | `starter` | Plain and simple, with everyday wording and no mascot. A blank slate to copy when making your own. |
 
 ## Picking a theme
 
-Open `config.js`, find `theme:`, and put the folder name between the quotes:
+In your sheet's **Settings** tab, pick a theme from the **Theme** dropdown. Your site switches within about 5 minutes.
+
+The dropdown keeps itself up to date: when a new theme is added here, it shows up in everyone's dropdown automatically. If you pick one that's newer than your copy of the site, your site keeps its current look until you update your copy (**Sync fork → Update branch** on GitHub). Your site's [setup check](../docs/sheet-guide.md#checking-your-setup) will tell you when that's the case.
+
+No Settings tab? Open `config.js`, find `theme:`, and put the folder name between the quotes:
 
 ```js
 theme: 'rpg-shop',
@@ -24,8 +33,20 @@ theme: 'rpg-shop',
 3. In `theme.json`, give it a name and change any wording you like (see the list below).
 4. Optionally add art and a mascot (see below).
 5. Preview it with `?theme=your-folder-name`.
+6. Add a line to `themes.csv` with its name and folder, like `Cozy Cabin,cozy-cabin`. That's what lets the sheet's Theme dropdown offer it by name.
 
-Made something you like? Open a pull request so others can use it too.
+## Share your theme with everyone
+
+Made something you like? Contribute it, and it will appear in every wishlist's Theme dropdown. 🎁
+
+1. Make your theme in your own copy of the repo, following the steps above, and check it with `?theme=your-folder-name`.
+2. Make sure it's all yours to share: your own art, and fonts from [Google Fonts](https://fonts.google.com) (they're free to use). No characters, logos or artwork from other people's work.
+3. On your copy's GitHub page, click **Contribute → Open pull request**. Give it a short title like "Add the Cozy Cabin theme", describe the look in a sentence or two, and attach a screenshot.
+4. A pull request is a suggestion, not a change: nothing happens to the main project until it's reviewed. You might get a question or two before it's added.
+
+New to pull requests? GitHub has a friendly [guide to your first pull request](https://docs.github.com/en/get-started/start-your-journey/hello-world). Themes are the easiest kind of contribution, because they're only CSS, JSON and SVG and can't break anyone's shop.
+
+By contributing, you agree to share your theme under the project's [GPLv3 license](../LICENSE).
 
 ### What goes in a theme folder
 
